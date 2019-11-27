@@ -1,5 +1,11 @@
 #! /bin/sh
 
+if [ `whoami` != 'root' ]
+then
+	echo "Este script requer privilégios de super usúario"
+	exit
+fi
+
 if [ -s 30_os-prober ]
 then
 	mv 30_os-prober /etc/grub.d/
