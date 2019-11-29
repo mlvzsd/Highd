@@ -17,6 +17,7 @@ then
 fi
 
 mv 30_os-prober /etc/grub.d/30_os-prober
+chmod +x /etc/grub.d/30_os-prober
 mv grub /etc/default/grub
 
 update-grub
