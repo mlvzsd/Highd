@@ -19,8 +19,8 @@ then
 	exit
 fi
 
-mv 30_os-prober /etc/grub.d/
-mv grub /etc/default/
+mv 30_os-prober /etc/grub.d/30_os-prober
+mv grub /etc/default/grub
 
 update-grub
 
