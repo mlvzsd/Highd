@@ -10,13 +10,14 @@ if ! [ -s 30_os-prober ]; then
 	exit 1
 fi
 
-if ! [ -s grub ]
-then
+if ! [ -s grub ]; then
 	echo "arquivo 'grub' não encontrado ou vazio, instalação interrompida"
 	exit 1
 fi
 
+chmod +x 30_os-prober 
 mv 30_os-prober /etc/grub.d/30_os-prober
+
 mv grub /etc/default/grub
 
 update-grub
